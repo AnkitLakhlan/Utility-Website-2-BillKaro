@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: rgb(37, 48, 105);
+    /* color: #a0a5a8; */
+}
+
+.container {
+    background-color: #ecf0f3;
+    width: 480px;
+    border-radius: 10px;
+    padding: 40px;
+    color: #adadad;
+}
+
+.container h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: black;
+    text-align: center;
+}
+
+.container .user-box {
+    position: relative;
+}
+
+.container .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #adadad;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #adadad;
+    outline: none;
+    background: transparent;
+}
+
+.container .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #adadad;
+    pointer-events: none;
+    transition: top 300ms ease-in-out;
+}
+
+.container .user-box input:focus~label,
+.container .user-box input:valid~label {
+    top: -20px;
+    left: 0;
+    color: rgb(37, 48, 105);
+    font-size: 12px;
+    transition: top 300ms ease-in-out;
+}
+
+select {
+    width: 100%;
+    background: #ecf0f3;
+    color: #adadad;
+    padding: 10px 12px;
+    border: 1px solid #adadad;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+select option {
+    width: 100%;
+}
+
+/* button css  */
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(37, 48, 105);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 4px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(37, 48, 105);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.btncontainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 410px) {
+    .container {
+        width: 350px;
+    }
+
+    .postpaid {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container {
+        width: 300px;
+    }
+
+    .container form .submitbtn {
+        font-size: 14px;
+    }
+
+    .postpaid {
+        font-size: 15px;
+    }
+
+    .container .user-box label {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .container {
+        width: 250px;
+    }
+
+    .container form .submitbtn {
+        font-size: 13px;
+    }
+
+    .postpaid {
+        font-size: 14px;
+    }
+
+    .container .user-box label {
+        font-size: 13px;
+    }
+
+    select {
+        font-size: 14px;
+    }
+}
