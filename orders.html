@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <title>UtilGo | Order History</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: rgb(37, 48, 105);
+            position: relative;
+        }
+
+        nav {
+            width: 100%;
+            padding: 20px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .container .tableheading {
+            margin-top: 60px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container .tableheading span {
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        table {
+            border-collapse: collapse;
+            background-color: white;
+            text-align: left;
+            color: black;
+            overflow-y: scroll;
+            overflow-x: scroll;
+        }
+
+        thead {
+            box-shadow: 0 5px 10px #adadad;
+        }
+
+        th {
+            padding: 0.5rem 1rem;
+            letter-spacing: 0.1rem;
+            font-size: 0.8rem;
+            font-weight: 900;
+        }
+
+        td {
+            padding: 0.8rem 2rem;
+            font-size: 0.89rem;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 880px) {
+            .tablecontainer {
+                overflow-x: scroll;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li style="position: relative">
+                    <a href="index.html"><i class="bx bx-arrow-back" style="
+                  position: absolute;
+                  top: 50%;
+                  transform: translateY(-50%);
+                "></i><span style="margin-left: 20px">Back</span></a>
+                </li>
+                <li style="position: relative">
+                    <a href="#"><i class="bx bxs-user" style="
+                  position: absolute;
+                  right: 95%;
+                  margin-right: 5px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                "></i><span> User</span></a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container">
+            <div class="tablecontainer">
+                <div class="tableheading">
+                    <span>Order History</span>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>Date</td>
+                            <td>Operator</td>
+                            <td>Number</td>
+                            <td>Operator ID</td>
+                            <td>Status</td>
+                            <td>Amount in &#8377;</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-09 5:54:20</td>
+                            <td>Tata Power- Delhi</td>
+                            <td>60004494211</td>
+                            <td>32832</td>
+                            <td>Success</td>
+                            <td>14550</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-8 14:52:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>34564</td>
+                            <td>Failed</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Failed</td>
+                            <td>5000</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                        <tr>
+                            <td>2022-7-11 5:15:20</td>
+                            <td>AIR</td>
+                            <td>7300895196</td>
+                            <td>56464</td>
+                            <td>Success</td>
+                            <td>12</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </header>
+</body>
+
+</html>
